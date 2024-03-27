@@ -1,0 +1,75 @@
+
+
+body,
+html {
+    margin: 0;
+}
+/* html  */
+.wrapper {
+    width: 1440px;
+    margin: 0 auto;
+}
+.result {
+    width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    border: 5px solid blue;
+    grid-gap: 10px;
+}
+/* js */
+.product {
+    width: 270px;
+    border: 2px solid #ccc;
+    border-radius: 6px;
+    /* margin-top: 6px; */
+    padding: 10px;
+    border:2px solid blue;
+}
+.product img {
+    width: 100%;
+    object-fit: cover;
+    height: 200px;
+}
+
+
+/* Адаптивная верска */
+/*размер macbook */
+@media screen and (max-width:992px) {
+    .wrapper {
+        max-width: 960px;
+    }
+    .result {
+        grid-template-columns: repeat(3, 1fr);
+        max-width: 900px;
+    }
+    .product {
+        margin: 0 auto;
+    }
+}
+/*размер Планшет */
+@media screen and (max-width:768px) {
+    .wrapper {
+        max-width: 760px;
+    }
+    .result {
+        grid-template-columns: repeat(2, 1fr);
+        max-width: 700px;
+    }
+    .product {
+        margin: 0 auto;
+    }
+}
+/*размер Телефон */
+@media screen and (max-width:500px) {
+    .wrapper {
+        max-width: 480px;
+    }
+    .result {
+        grid-template-columns: repeat(1, 1fr);
+        max-width: 450px;
+    }
+    .product {
+        margin: 0 auto;
+    }
+}
